@@ -8,12 +8,20 @@ const graphData = {
       { id: "node2", label: "2" },
       { id: "node3", label: "3" },
       { id: "node4", label: "4" },
+	  { id: "node5", label: "5" },
+	  { id: "node6", label: "6" },
+	  { id: "node7", label: "7" },
+	  { id: "node8", label: "8" },
     ],
     edges: [
 		{ source: "node1", target: "node2" },
 		{ source: "node1", target: "node3" },
 		{ source: "node2", target: "node3" },
 		{ source: "node2", target: "node4" },
+		{ source: "node4", target: "node5" },
+		{ source: "node5", target: "node6" },
+		{ source: "node5", target: "node7" },
+		{ source: "node6", target: "node8" },
 	],
   };
 
@@ -71,8 +79,8 @@ const G6GraphTest = (props) => {
 
 	return (
 		<>
-			<button onClick={handleClick1}>changeData1</button>
-			<button onClick={handleClick2}>changeData2</button>
+			<button onClick={handleClick1}>circular layout</button>
+			<button onClick={handleClick2}>grid layout</button>
 			<div ref={ref}> </div>
 		</>
 		);
